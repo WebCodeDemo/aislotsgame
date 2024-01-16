@@ -1,0 +1,140 @@
+/* General styles */
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+#cash {
+	font-size: 24px;
+}
+
+/* Container for the entire game */
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  /*height: 100vh;*/
+}
+#reset-cash {
+	margin-top: 10px;
+}
+/* Canvas element */
+#slotmachine {
+  padding: 10px;
+  border: 5px solid #fff;
+  background-color: #444;
+}
+
+/* Slot machine container */
+#testa {
+  display: flex;
+}
+
+/* Info container */
+#info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+}
+
+/* Spin button */
+#spin {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#spin:hover {
+  background-color: darkblue;
+}
+#spin:active{
+  background-color: yellow;
+ }
+
+button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    justify-content: center;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #5c5c5c;
+}
+
+#paytable {
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+
+
+#game-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#slotmachine {
+  width: 15%; 
+}
+
+
+#info-container {
+  width: 10%; 
+}
+
+#paytable {
+  width: 20%; 
+  margin-top: 10px;
+}
+
+/*
+#slotmachine {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+
+#info-container {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+#paytable {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+*/
