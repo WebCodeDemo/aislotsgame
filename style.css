@@ -77,10 +77,10 @@ tr:nth-child(even) {
 /* Canvas element */
 #slotmachine {
   padding: 10px;
-  border: 5px solid #fff;
+  border: 5px solid #444;
   background-color: #444;
-  width: 720px; /* Width to accommodate three 200px wide images plus spacing */
-  height: 220px; /* Height for 200px tall images plus some padding */
+  width: 720px;
+  height: 220px;
 }
 
 /* Slot machine container */
