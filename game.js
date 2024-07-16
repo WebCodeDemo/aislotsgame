@@ -131,9 +131,9 @@ function displaySlotMachine() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
   // display the current state of the slot machine
-  ctx.drawImage(reel1Images[currentSlotMachineState[0]], 10, 10, 80, 80);
-  ctx.drawImage(reel2Images[currentSlotMachineState[1]], 115, 10, 80, 80);
-  ctx.drawImage(reel3Images[currentSlotMachineState[2]], 220, 10, 80, 80);
+  ctx.drawImage(reel1Images[currentSlotMachineState[0]], 10, 10, 200, 200);
+  ctx.drawImage(reel2Images[currentSlotMachineState[1]], 260, 10, 200, 200);
+  ctx.drawImage(reel3Images[currentSlotMachineState[2]], 510, 10, 200, 200);
   
   // Reset the table 
   document.getElementById("cherry").style.backgroundColor = "inherit";
