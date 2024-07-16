@@ -12,7 +12,47 @@ let winningMessages = [
   "Fortune favors the bold, and you're as bold as they come!",
   "You're riding a wave of luck! Surf's up, champion!",
   "If life were a movie, you'd be the star right now!"
+  "An otherworldly force is guiding your actions today. Go with it!",
+"You've been chosen. Now, what will you do with this power?",
+"The slot gods have smiled upon you. Time to make them proud!",
+"Something extraordinary is about to happen. Be ready to seize the moment.",
+"Your luck has reached legendary status. Use it wisely, my friend.",
+"A mysterious benefactor has taken an interest in your success. Embrace it!",
+"This win is just the beginning. The universe has big plans for you.",
+"Fate has deemed you worthy. Don't let this opportunity slip through your fingers.",
+"The heavens have opened up, and a shower of good fortune rains down on you.",
+"You're touching the divine today. Make the most of this celestial connection.",
+"A guardian angel is watching over you. Listen closely, and you may hear their guidance.",
+"This win is a sign. The universe wants you to take a bold step forward.",
+"You're on the precipice of greatness. All you have to do is leap.",
+"An older gentleman told me to tell you 'Good Luck!' - heed his words.",
+"I think you should go viral. This win is just the first step to internet fame.",
+"Your aura is shining brighter than ever. Bask in this moment of triumph.",
+"The cosmic forces have aligned to bring you this victory. Harness that energy.",
+"You're a magnet for good fortune. Keep your eyes open for more serendipitous moments.",
+"This win is a testament to your resilience. Keep pushing forward, champion.",
+"The slot machine has spoken – you're destined for greatness. Believe it!"
+"The cosmic forces have aligned to bring you this victory. Harness that energy.",
+"You're a magnet for good fortune. Keep your eyes open for more serendipitous moments.",
+"This win is a testament to your resilience. Keep pushing forward, champion.",
+"The slot machine has spoken – you're destined for greatness. Believe it!",
+"Destiny has delivered you this victory. The future is yours to command!",
+"The universe has gifted you with unparalleled luck. Use it to rewrite your destiny!",
+"This win is a cosmic sign – you're on the precipice of a life-changing transformation!",
+"Congratulations, you've unlocked the key to the universe's secrets. The possibilities are endless!",
+"Your triumph today is just the beginning of an extraordinary journey. Brace yourself for the adventure of a lifetime!",
+"The veil has been lifted, and the world is yours to conquer. This victory is merely the first step toward your true calling.",
+"Today, you've tapped into a power greater than yourself. Embrace it, and let it guide you to unimaginable heights of success!",
+"The slot machine has revealed your true purpose. This win is a call to action – the time to fulfill your destiny is now!",
+"You've shattered the boundaries of the ordinary. From this day forward, you're operating on a higher plane of existence. Savor this moment of triumph!",
+"The very fabric of reality has shifted to accommodate your victory. You are no longer bound by the constraints of the mundane. Ascend to your rightful place as a force to be reckoned with!",
+"This win is a testament to the power of your spirit. You have tapped into a well of infinite potential. Now, it's time to unleash that power and transform the world around you!",
+"Congratulations, you have been chosen by the cosmic forces to lead the charge into a new era of human evolution. This victory is just the beginning of your remarkable journey.",
+"The universe has bestowed upon you the mantle of greatness. Your triumph today is a sign that you are destined for extraordinary things. Embrace your new role as a beacon of hope and inspiration for all who cross your path!"
+
+
 ];
+
 
 // array to store the possibilities for each reel
 let reel1 = ["cherry", "lemon", "orange", "plum", "bell", "bar", "seven", "blank"];
