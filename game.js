@@ -130,10 +130,14 @@ function displaySlotMachine() {
   // clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
+  // Calculate the size and position of each image
+  let imageSize = 200;
+  let spacing = 60; // Space between images
+  
   // display the current state of the slot machine
-  ctx.drawImage(reel1Images[currentSlotMachineState[0]], 10, 10, 200, 200);
-  ctx.drawImage(reel2Images[currentSlotMachineState[1]], 260, 10, 200, 200);
-  ctx.drawImage(reel3Images[currentSlotMachineState[2]], 510, 10, 200, 200);
+  ctx.drawImage(reel1Images[currentSlotMachineState[0]], 10, 10, imageSize, imageSize);
+  ctx.drawImage(reel2Images[currentSlotMachineState[1]], 10 + imageSize + spacing, 10, imageSize, imageSize);
+  ctx.drawImage(reel3Images[currentSlotMachineState[2]], 10 + 2 * (imageSize + spacing), 10, imageSize, imageSize);
   
   // Reset the table 
   document.getElementById("cherry").style.backgroundColor = "inherit";
