@@ -136,11 +136,17 @@ function displaySlotMachine() {
   let payout = checkPayout(currentSlotMachineState);
   playerCash += payout;
   if (payout <= 0){
-    document.getElementById("slotmachine").style.borderColor = "red";
+    document.getElementById("slotmachine").style.borderColor = "#444";
+    document.getElementById("slotmachine").style.borderWidth = "5px";
   } 
   else if (payout > 0) {
     document.getElementById(currentSlotMachineState[0]).style.backgroundColor = "green";
     document.getElementById("slotmachine").style.borderColor = "green";
+    document.getElementById("slotmachine").style.borderWidth = "20px";
+    
+    // Display winning message
+    let randomMessage = winningMessages[Math.floor(Math.random() * winningMessages.length)];
+    alert(`Congratulations! You won $${payout}!\n\n${randomMessage}`);
   }
   updateCashDisplay();
 }
