@@ -11,7 +11,7 @@ let winningMessages = [
   "You're radiating winner energy! Share some of that luck with a friend!",
   "Fortune favors the bold, and you're as bold as they come!",
   "You're riding a wave of luck! Surf's up, champion!",
-  "If life were a movie, you'd be the star right now!"
+  "If life were a movie, you'd be the star right now!",
   "An otherworldly force is guiding your actions today. Go with it!",
 "You've been chosen. Now, what will you do with this power?",
 "The slot gods have smiled upon you. Time to make them proud!",
@@ -31,7 +31,7 @@ let winningMessages = [
 "The cosmic forces have aligned to bring you this victory. Harness that energy.",
 "You're a magnet for good fortune. Keep your eyes open for more serendipitous moments.",
 "This win is a testament to your resilience. Keep pushing forward, champion.",
-"The slot machine has spoken – you're destined for greatness. Believe it!"
+"The slot machine has spoken – you're destined for greatness. Believe it!",
 "The cosmic forces have aligned to bring you this victory. Harness that energy.",
 "You're a magnet for good fortune. Keep your eyes open for more serendipitous moments.",
 "This win is a testament to your resilience. Keep pushing forward, champion.",
@@ -49,7 +49,6 @@ let winningMessages = [
 "This win is a testament to the power of your spirit. You have tapped into a well of infinite potential. Now, it's time to unleash that power and transform the world around you!",
 "Congratulations, you have been chosen by the cosmic forces to lead the charge into a new era of human evolution. This victory is just the beginning of your remarkable journey.",
 "The universe has bestowed upon you the mantle of greatness. Your triumph today is a sign that you are destined for extraordinary things. Embrace your new role as a beacon of hope and inspiration for all who cross your path!"
-
 
 ];
 
