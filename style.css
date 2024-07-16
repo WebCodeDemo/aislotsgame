@@ -25,11 +25,22 @@ body {
   padding: 10px;
   border: 5px solid #fff;
   background-color: #444;
+  width: 720px; /* Adjust this to fit three 200px wide images plus padding */
+  height: 220px; /* Adjust this to fit 200px tall images plus padding */
 }
 
 /* Slot machine container */
 #testa {
   display: flex;
+  justify-content: center;
+}
+
+/* Game container */
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
 
 /* Info container */
@@ -37,7 +48,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  #slotmachine {
+    width: 90vw; /* 90% of the viewport width */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 
 /* Spin button */
