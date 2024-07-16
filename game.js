@@ -1,7 +1,5 @@
-
 // variable to store the player's cash
 let playerCash = 100;
-let numberOfResets = -1;
 
 // array to store the possibilities for each reel
 let reel1 = ["cherry", "lemon", "orange", "plum", "bell", "bar", "seven", "blank"];
@@ -85,7 +83,6 @@ let paytable = [
   { combination: ["bell", "bell", "bell"], payout: 50 },
   { combination: ["bar", "bar", "bar"], payout: 60 },
   { combination: ["seven", "seven", "seven"], payout: 70 },
-  // add more combinations as necessary
 ];
 
 function checkPayout(state) {
@@ -96,8 +93,8 @@ function checkPayout(state) {
   }
   return 0;
 }
+
 function spin() {
-  if (playerCash > 0) {
   // decrease player's cash by 3
   playerCash -= 3;
 
@@ -106,11 +103,9 @@ function spin() {
 
   let reel1Index, reel2Index, reel3Index;
   // pick random indexes for each reel
-  do {
-    reel1Index = Math.floor(Math.random() * reel1.length);
-    reel2Index = Math.floor(Math.random() * reel1.length);
-    reel3Index = Math.floor(Math.random() * reel1.length);
-  } while (reel1[reel1Index] !== reel2[reel2Index] && reel1[reel1Index] !== reel3[reel3Index] && reel2[reel2Index] !== reel3[reel3Index]);
+  reel1Index = Math.floor(Math.random() * reel1.length);
+  reel2Index = Math.floor(Math.random() * reel2.length);
+  reel3Index = Math.floor(Math.random() * reel3.length);
 
   // store the result in the currentSlotMachineState array
   currentSlotMachineState = [reel1[reel1Index], reel2[reel2Index], reel3[reel3Index]];
@@ -123,24 +118,10 @@ function spin() {
   // animateSlotMachine
   animateSlotMachine()
   
-  
   // call a function to display the current state of the slot machine
   displaySlotMachine();
-  }
-  else {
-    alert("You don't have enough money to spin!");
-	// Create reset button
-	if (numberOfResets == -1){
-	let resetButton = document.createElement("button");
-	resetButton.innerHTML = "Reset";
-	resetButton.id = "reset-cash";
-	resetButton.onclick = resetCash;
-	let buttonContainer = document.getElementById("reset-button");
-	buttonContainer.appendChild(resetButton);
-	numberOfResets++;
-	}
-  }
 }
+
 function displaySlotMachine() {
   // get the canvas element and its context
   let canvas = document.getElementById("slotmachine");
@@ -149,8 +130,6 @@ function displaySlotMachine() {
   // clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-  
-
   // display the current state of the slot machine
   ctx.drawImage(reel1Images[currentSlotMachineState[0]], 10, 10, 80, 80);
   ctx.drawImage(reel2Images[currentSlotMachineState[1]], 115, 10, 80, 80);
@@ -169,65 +148,58 @@ function displaySlotMachine() {
   let payout = checkPayout(currentSlotMachineState);
   playerCash += payout;
   if (payout <= 0){
-	document.getElementById("slotmachine").style.borderColor = "red";
+    document.getElementById("slotmachine").style.borderColor = "red";
   } 
   else if (payout == 10) {
-	  document.getElementById("cherry").style.backgroundColor = "green";
-	  document.getElementById("slotmachine").style.borderColor = "green";
+    document.getElementById("cherry").style.backgroundColor = "green";
+    document.getElementById("slotmachine").style.borderColor = "green";
   }
   else if (payout == 20) {
-	  document.getElementById("lemon").style.backgroundColor = "green";
-	  document.getElementById("slotmachine").style.borderColor = "green";
+    document.getElementById("lemon").style.backgroundColor = "green";
+    document.getElementById("slotmachine").style.borderColor = "green";
   }
   else if (payout == 30) {
-	  document.getElementById("orange").style.backgroundColor = "green";
-	  document.getElementById("slotmachine").style.borderColor = "green";
+    document.getElementById("orange").style.backgroundColor = "green";
+    document.getElementById("slotmachine").style.borderColor = "green";
   }
   else if (payout == 40) {
-	  document.getElementById("plum").style.backgroundColor = "green";
-	  document.getElementById("slotmachine").style.borderColor = "green";
+    document.getElementById("plum").style.backgroundColor = "green";
+    document.getElementById("slotmachine").style.borderColor = "green";
   }
   else if (payout == 50) {
-	  document.getElementById("bell").style.backgroundColor = "green";
-	  document.getElementById("slotmachine").style.borderColor = "green";
+    document.getElementById("bell").style.backgroundColor = "green";
+    document.getElementById("slotmachine").style.borderColor = "green";
   }
   else if (payout == 60) {
-	  document.getElementById("bar").style.backgroundColor = "green";
-	  document.getElementById("slotmachine").style.borderColor = "green";
+    document.getElementById("bar").style.backgroundColor = "green";
+    document.getElementById("slotmachine").style.borderColor = "green";
   }
   else if (payout == 70) {
-	  document.getElementById("seven").style.backgroundColor = "green";
-	  document.getElementById("slotmachine").style.borderColor = "green";
+    document.getElementById("seven").style.backgroundColor = "green";
+    document.getElementById("slotmachine").style.borderColor = "green";
   }
   else {
-	  
-	document.getElementById("slotmachine").style.borderColor = "green";
+    document.getElementById("slotmachine").style.borderColor = "green";
   }
   updateCashDisplay();
 }
 
 function animateSlotMachine() {
-	let canvas = document.getElementById("slotmachine");
+  let canvas = document.getElementById("slotmachine");
   let ctx = canvas.getContext("2d");
-  //ctx.drawImage(animationImages[randomInteger(0,animationImages.length-1)], 10, 10, 80, 80);
   for (let i = 0; i < animationInterval; i++) {
-
-    //ctx.drawImage(animationImages[randomInteger(0,animationImages.length-1)], 10, 10, 80, 80);
-}
-  
+    // Animation logic can be added here if needed
+  }
 }
 
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function resetCash() {
-	playerCash = 100;
-	updateCashDisplay();
-	numberOfResets++;
+function updateCashDisplay() {
+  let cashDisplay = playerCash >= 0 ? moneySign + playerCash : "-" + moneySign + Math.abs(playerCash);
+  document.getElementById("cash").innerHTML = cashDisplay;
 }
 
-function updateCashDisplay() {
-	
-	document.getElementById("cash").innerHTML = moneySign.concat(playerCash);
-}
+// Initialize the game
+updateCashDisplay();
