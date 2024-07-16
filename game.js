@@ -1,6 +1,19 @@
 // variable to store the player's cash
 let playerCash = 100;
 
+let winningMessages = [
+  "This must be your lucky day! I suggest you ask out your crush right now!",
+  "The stars have aligned in your favor! Quick, buy a lottery ticket!",
+  "You're on fire! Maybe it's time to pursue that dream career?",
+  "Lady Luck is smiling upon you! Go make that big life decision you've been postponing!",
+  "You're unstoppable! Is there anything you can't do today?",
+  "The universe is sending you a message: take that risk you've been considering!",
+  "You're radiating winner energy! Share some of that luck with a friend!",
+  "Fortune favors the bold, and you're as bold as they come!",
+  "You're riding a wave of luck! Surf's up, champion!",
+  "If life were a movie, you'd be the star right now!"
+];
+
 // array to store the possibilities for each reel
 let reel1 = ["cherry", "lemon", "orange", "plum", "bell", "bar", "seven", "blank"];
 let reel2 = ["cherry", "lemon", "orange", "plum", "bell", "bar", "seven", "blank"];
