@@ -195,7 +195,7 @@ function displaySlotMachine() {
   else if (payout > 0) {
     document.getElementById(currentSlotMachineState[0]).style.backgroundColor = "green";
     document.getElementById("slotmachine").style.borderColor = "green";
-    document.getElementById("slotmachine").style.borderWidth = "20px";
+    document.getElementById("slotmachine").style.borderWidth = "30px";
     
     // Display winning message
     let randomMessage = winningMessages[Math.floor(Math.random() * winningMessages.length)];
