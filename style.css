@@ -9,14 +9,7 @@ body {
 	font-size: 24px;
 }
 
-/* Container for the entire game */
-#game-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
-  /*height: 100vh;*/
-}
+
 #reset-cash {
 	margin-top: 10px;
 }
