@@ -13,44 +13,6 @@ body {
 #reset-cash {
 	margin-top: 10px;
 }
-/* Canvas element */
-#slotmachine {
-  padding: 10px;
-  border: 5px solid #fff;
-  background-color: #444;
-  width: 720px; /* Adjust this to fit three 200px wide images plus padding */
-  height: 220px; /* Adjust this to fit 200px tall images plus padding */
-}
-
-/* Slot machine container */
-#testa {
-  display: flex;
-  justify-content: center;
-}
-
-/* Game container */
-#game-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-
-/* Info container */
-#info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-/* Responsive layout */
-@media (max-width: 768px) {
-  #slotmachine {
-    width: 90vw; /* 90% of the viewport width */
-    height: auto; /* Maintain aspect ratio */
-  }
-}
 
 /* Spin button */
 #spin {
@@ -107,46 +69,46 @@ tr:nth-child(even) {
 }
 
 
-
-
-#game-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#slotmachine {
-  width: 15%; 
-}
-
-
-#info-container {
-  width: 10%; 
-}
-
 #paytable {
   width: 20%; 
   margin-top: 10px;
 }
 
-/*
+/* Canvas element */
 #slotmachine {
-  grid-row: 1/3;
-  grid-column: 1/2;
+  padding: 10px;
+  border: 5px solid #fff;
+  background-color: #444;
+  width: 720px; /* Width to accommodate three 200px wide images plus spacing */
+  height: 220px; /* Height for 200px tall images plus some padding */
 }
 
+/* Slot machine container */
+#testa {
+  display: flex;
+  justify-content: center;
+}
+
+/* Game container */
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Info container */
 #info-container {
-  grid-row: 1/2;
-  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
-#paytable {
-  grid-row: 2/3;
-  grid-column: 2/3;
+/* Responsive layout */
+@media (max-width: 768px) {
+  #slotmachine {
+    width: 90vw; /* 90% of the viewport width */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-*/
