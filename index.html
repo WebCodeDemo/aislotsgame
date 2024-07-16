@@ -1,63 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Slot Machine Game</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="game.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="game-container">
-    <canvas id="slotmachine"></canvas>
-    <div id="testa"></div>
-    <div id="info-container">
-      <p>Player's Cash: <span id="cash">$100</span></p>
-      <br>
-      <button id="spin" onclick="spin()">Spin</button>
-	  <div id="reset-button">
-	  
-	  </div>
+    <div id="game-container">
+        <div id="testa">
+            <canvas id="slotmachine" width="310" height="100"></canvas>
+        </div>
+
+        <div id="info-container">
+            <p>Player's Cash: <span id="cash">$100</span></p>
+            <button id="spin" onclick="spin()">Spin</button>
+        </div>
+
+        <table id="paytable">
+            <tr>
+                <th>Reel Possibility</th>
+                <th>Payout (3 in a row)</th>
+            </tr>
+            <tr id="cherry">
+                <td>Cherry</td>
+                <td>10</td>
+            </tr>
+            <tr id="lemon">
+                <td>Lemon</td>
+                <td>20</td>
+            </tr>
+            <tr id="orange">
+                <td>Orange</td>
+                <td>30</td>
+            </tr>
+            <tr id="plum">
+                <td>Plum</td>
+                <td>40</td>
+            </tr>
+            <tr id="bell">
+                <td>Bell</td>
+                <td>50</td>
+            </tr>
+            <tr id="bar">
+                <td>Bar</td>
+                <td>60</td>
+            </tr>
+            <tr id="seven">
+                <td>Seven</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>Blank</td>
+                <td>0</td>
+            </tr>
+        </table>
     </div>
-  </div>
-<table id="paytable">
-    <tr>
-        <th>Reel Possibility</th>
-        <th>Payout (3 in a row)</th>
-    </tr>
-    <tr id="cherry" >
-        <td>Cherry</td>
-        <td>10</td>
-    </tr>
-    <tr id="lemon">
-        <td>Lemon</td>
-        <td>20</td>
-    </tr>
-    <tr id="orange">
-        <td>Orange</td>
-        <td>30</td>
-    </tr>
-    <tr id="plum">
-        <td>Plum</td>
-        <td>40</td>
-    </tr>
-    <tr id="bell">
-        <td>Bell</td>
-        <td>50</td>
-    </tr>
-    <tr id="bar">
-        <td>Bar</td>
-        <td>60</td>
-    </tr>
-    <tr id="seven">
-        <td>Seven</td>
-        <td>70</td>
-    </tr>
-    <tr id="blank">
-        <td>Blank</td>
-        <td>0</td>
-    </tr>
-</table>
 
-
-
+    <script src="game.js"></script>
 </body>
 </html>
