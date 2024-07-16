@@ -48,32 +48,12 @@ let reel3Images = {
   "blank": new Image(),
 };
 
-reel1Images["cherry"].src = "images/cherry.jpg";
-reel1Images["lemon"].src = "images/lemon.jpg";
-reel1Images["orange"].src = "images/orange.jpg";
-reel1Images["plum"].src = "images/plum.jpg";
-reel1Images["bell"].src = "images/bell.jpg";
-reel1Images["bar"].src = "images/bar.jpg";
-reel1Images["seven"].src = "images/seven.jpg";
-reel1Images["blank"].src = "images/blank.jpg";
-
-reel2Images["cherry"].src = "images/cherry.jpg";
-reel2Images["lemon"].src = "images/lemon.jpg";
-reel2Images["orange"].src = "images/orange.jpg";
-reel2Images["plum"].src = "images/plum.jpg";
-reel2Images["bell"].src = "images/bell.jpg";
-reel2Images["bar"].src = "images/bar.jpg";
-reel2Images["seven"].src = "images/seven.jpg";
-reel2Images["blank"].src = "images/blank.jpg";
-
-reel3Images["cherry"].src = "images/cherry.jpg";
-reel3Images["lemon"].src = "images/lemon.jpg";
-reel3Images["orange"].src = "images/orange.jpg";
-reel3Images["plum"].src = "images/plum.jpg";
-reel3Images["bell"].src = "images/bell.jpg";
-reel3Images["bar"].src = "images/bar.jpg";
-reel3Images["seven"].src = "images/seven.jpg";
-reel3Images["blank"].src = "images/blank.jpg";
+// Load images for each reel
+for (let reel of [reel1Images, reel2Images, reel3Images]) {
+  for (let symbol in reel) {
+    reel[symbol].src = `images/${symbol}.jpg`;
+  }
+}
 
 let paytable = [
   { combination: ["cherry", "cherry", "cherry"], payout: 10 },
@@ -103,9 +83,13 @@ function spin() {
 
   let reel1Index, reel2Index, reel3Index;
   // pick random indexes for each reel
-  reel1Index = Math.floor(Math.random() * reel1.length);
-  reel2Index = Math.floor(Math.random() * reel2.length);
-  reel3Index = Math.floor(Math.random() * reel3.length);
+  do {
+    reel1Index = Math.floor(Math.random() * reel1.length);
+    reel2Index = Math.floor(Math.random() * reel2.length);
+    reel3Index = Math.floor(Math.random() * reel3.length);
+  } while (reel1[reel1Index] !== reel2[reel2Index] && 
+           reel1[reel1Index] !== reel3[reel3Index] && 
+           reel2[reel2Index] !== reel3[reel3Index]);
 
   // store the result in the currentSlotMachineState array
   currentSlotMachineState = [reel1[reel1Index], reel2[reel2Index], reel3[reel3Index]];
@@ -154,35 +138,8 @@ function displaySlotMachine() {
   if (payout <= 0){
     document.getElementById("slotmachine").style.borderColor = "red";
   } 
-  else if (payout == 10) {
-    document.getElementById("cherry").style.backgroundColor = "green";
-    document.getElementById("slotmachine").style.borderColor = "green";
-  }
-  else if (payout == 20) {
-    document.getElementById("lemon").style.backgroundColor = "green";
-    document.getElementById("slotmachine").style.borderColor = "green";
-  }
-  else if (payout == 30) {
-    document.getElementById("orange").style.backgroundColor = "green";
-    document.getElementById("slotmachine").style.borderColor = "green";
-  }
-  else if (payout == 40) {
-    document.getElementById("plum").style.backgroundColor = "green";
-    document.getElementById("slotmachine").style.borderColor = "green";
-  }
-  else if (payout == 50) {
-    document.getElementById("bell").style.backgroundColor = "green";
-    document.getElementById("slotmachine").style.borderColor = "green";
-  }
-  else if (payout == 60) {
-    document.getElementById("bar").style.backgroundColor = "green";
-    document.getElementById("slotmachine").style.borderColor = "green";
-  }
-  else if (payout == 70) {
-    document.getElementById("seven").style.backgroundColor = "green";
-    document.getElementById("slotmachine").style.borderColor = "green";
-  }
-  else {
+  else if (payout > 0) {
+    document.getElementById(currentSlotMachineState[0]).style.backgroundColor = "green";
     document.getElementById("slotmachine").style.borderColor = "green";
   }
   updateCashDisplay();
@@ -191,9 +148,7 @@ function displaySlotMachine() {
 function animateSlotMachine() {
   let canvas = document.getElementById("slotmachine");
   let ctx = canvas.getContext("2d");
-  for (let i = 0; i < animationInterval; i++) {
-    // Animation logic can be added here if needed
-  }
+  // Add animation logic here if needed
 }
 
 function randomInteger(min, max) {
